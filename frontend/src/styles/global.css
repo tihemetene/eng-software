@@ -1,0 +1,33 @@
+.card-header{
+    background-color: rgb(66 202 42 / 30%)!important;
+}
+
+input {
+    height: 30px;
+    padding: 5px 15px;
+    margin: 10px;
+    border-color: black;
+    border-radius: 5px;
+    border: 1px solid;
+}
+span{
+    margin-right: 4px;
+}
+
+.icons{
+    transition: 2s;
+    cursor: pointer;
+    size: 30 30;
+}
+
+.icons:hover{
+    transform: scale(1.2);
+}
+
+.center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
