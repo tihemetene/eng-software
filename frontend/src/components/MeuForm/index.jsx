@@ -79,7 +79,7 @@ const MeuForm = () => {
                   date: moment(date).format('MM-DD-YYYY'),
                   hour: moment(hour).format('HH:mm'),
                   isIdoso: isIdoso(idade(age)),
-                  isAtendido: 'Não vacinado',
+                  isAtendido: 'Não atendido!',
                   note: '',
                 });
                 toast.success('Paciente cadastrado com sucesso!');

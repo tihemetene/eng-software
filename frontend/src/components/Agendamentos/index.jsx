@@ -18,7 +18,7 @@ const [reloadCount, setReloadCount] = useState(0);
           date: user.date,
           hour: user.hour,
           isIdoso: user.isIdoso,
-          isAtendido: 'Vacinado',
+          isAtendido: 'Atendido',
         });
         setReloadCount(reloadCount + 1)
       }catch(e){

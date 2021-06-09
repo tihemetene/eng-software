@@ -7,7 +7,7 @@ import '../../styles/global.css'
 import * as Yup from 'yup';
 import axios from '../../util/api'
 
-const RecepForm = () => {
+const RecepForm = ({history}) => {
 
     const formik = useFormik({
         initialValues: {
@@ -30,9 +30,9 @@ const RecepForm = () => {
                   login: formik.values.login,
                   password: formik.values.password,
                 });
-                toast.success('Recepcionista cadastrado com sucesso!');
+                toast.success('Recepcionista logado com sucesso!');
               }catch(error){
-               toast.error('Erro ao cadastrar. Verifique se o login já não foi cadastrado.')
+               toast.error('Erro ao logar. Verifique se o login já não está logado.')
               }                                
         },
        });
@@ -74,7 +74,7 @@ const RecepForm = () => {
                         <div style={{ color: "red" }}>{formik.errors.password}</div>
                         ) : null}  
                     </div>                                     
-                    <Button className="mt-3" variant="success" type="submit"> Cadastrar </Button>
+                    <Button className="mt-3" variant="success" type="submit" onClick={() => history.push('/agendamento')}> Cadastrar </Button>
                     <a className="btn btn-outline-secondary ml-2 mt-3" href="/">Voltar</a>
                 </form>
                 )}
