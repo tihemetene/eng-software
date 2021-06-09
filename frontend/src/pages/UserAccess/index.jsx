@@ -71,6 +71,7 @@ const onChange = (event) => {
                 ></textarea>
                 <Button type="submit" className="mt-2">Adicionar comentário</Button>
                 <Button className="mt-2 ml-2" variant="outline-secondary" onClick={() => history.push("/agendamento")}>Voltar</Button>
+                <a className="mt-3 ml-2" href="mailto:example@example.com">Enviar e-mail</a>
                 </form>
                 </>}
             </CardInicial>

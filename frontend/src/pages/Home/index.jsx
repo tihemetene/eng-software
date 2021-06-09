@@ -1,7 +1,7 @@
 import React from 'react'
 import CardInicial from '../../components/Card'
 import { Card, Container, Row, Image } from 'react-bootstrap'
-import tph from '../../Assets/Images/tph.png'
+import tph1 from '../../Assets/Images/tph1.png'
 
 const Home = () =>
 (
@@ -11,12 +11,10 @@ const Home = () =>
         >
             <Card.Body>
                 <Row>
-                    <h4>Bem vindo ao portal MediHouse para agendamentos e consultas! Escolha a opção abaixo caso seja um médico ou caso seja um enfermeiro.</h4>
+                    <h4>Bem vindo ao portal MediHouse Clinic System para agendamentos e consultas! Escolha a opção abaixo caso seja um médico ou caso seja um enfermeiro.</h4>
                 </Row>
-                <Image className="center" src={tph}></Image>
+                <Image className="center" src={tph1}></Image>
                 <Row>
-                    <Card.Link href="/agendamento/new">Acesso paciente</Card.Link>
-                    <Card.Link href="/agendamento">Acesso Enfermeiro</Card.Link>
                     <Card.Link href="/acessoMedico">Acesso Médico</Card.Link>
                     <Card.Link href="/acessoRecep">Acesso Recepcionista</Card.Link>                  
                 </Row>

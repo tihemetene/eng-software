@@ -74,7 +74,8 @@ const RecepForm = () => {
                         <div style={{ color: "red" }}>{formik.errors.password}</div>
                         ) : null}  
                     </div>                                     
-                    <Button className="mt-3" variant="success" type="submit"> Cadastrar </Button>
+                    <Button className="mt-3" variant="success" type="submit"> Login </Button>
+                    <a className="btn btn-outline-primary ml-2 mt-3" href="/agendamento/new">Acesso ao agendamento</a>
                     <a className="btn btn-outline-secondary ml-2 mt-3" href="/">Voltar</a>
                 </form>
                 )}

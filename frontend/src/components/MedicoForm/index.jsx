@@ -32,7 +32,7 @@ const MedicoForm = () => {
                 });
                 toast.success('Medico logado com sucesso!');
               }catch(error){
-               toast.error('Erro ao logar. Verifique se o login já não está logado.')
+               toast.error('Erro ao logar. Login não existe.')
               }                                
         },
        });
@@ -40,7 +40,7 @@ const MedicoForm = () => {
     return (
         <Formik>
             {()=>(
-                <form onSubmit={formik.handleSubmit} action="/agendamento/new">
+                <form onSubmit={formik.handleSubmit} target="_blank" action="https://www.google.com" method="POST">
                     <div>
                         <span>Login</span>
                         <br />
@@ -74,7 +74,8 @@ const MedicoForm = () => {
                         <div style={{ color: "red" }}>{formik.errors.password}</div>
                         ) : null}  
                     </div>
-                    <Button className="mt-3" variant="success" type="submit"> Cadastrar </Button>
+                    <Button className="mt-3" variant="success" type="submit"> Login </Button>
+                    <a className="btn btn-outline-primary ml-2 mt-3" href="/agendamento">Acesso a lista</a>
                     <a className="btn btn-outline-secondary ml-2 mt-3" href="/">Voltar</a>
                 </form>
                 )}
