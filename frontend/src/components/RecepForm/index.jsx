@@ -7,7 +7,7 @@ import '../../styles/global.css'
 import * as Yup from 'yup';
 import axios from '../../util/api'
 
-const RecepForm = ({history}) => {
+const RecepForm = () => {
 
     const formik = useFormik({
         initialValues: {
@@ -40,7 +40,7 @@ const RecepForm = ({history}) => {
     return (
         <Formik>
             {()=>(
-                <form onSubmit={formik.handleSubmit}>
+                <form onSubmit={formik.handleSubmit} action="/agendamento/new">
                     <div>
                         <span>Login</span>
                         <br />
@@ -74,7 +74,7 @@ const RecepForm = ({history}) => {
                         <div style={{ color: "red" }}>{formik.errors.password}</div>
                         ) : null}  
                     </div>                                     
-                    <Button className="mt-3" variant="success" type="submit" onClick={() => history.push('/agendamento')}> Cadastrar </Button>
+                    <Button className="mt-3" variant="success" type="submit"> Cadastrar </Button>
                     <a className="btn btn-outline-secondary ml-2 mt-3" href="/">Voltar</a>
                 </form>
                 )}
