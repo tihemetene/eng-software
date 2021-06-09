@@ -4,6 +4,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const UserRouter = require('./routes/user.router');
+const MedicoRouter = require('./routes/medico.router');
+const RecepRouter = require('./routes/recep.router');
+
 require('dotenv').config();
 
 const {HTTP_PORT, MONGO_URL} = process.env;
@@ -25,6 +28,8 @@ app.get('/', (req, res) =>{
 })
 
 app.use('/api', UserRouter); 
+app.use('/api', MedicoRouter); 
+app.use('/api', RecepRouter); 
 
 app.listen(HTTP_PORT, () => {
   console.log(`Rodando na porta ${HTTP_PORT}`);
